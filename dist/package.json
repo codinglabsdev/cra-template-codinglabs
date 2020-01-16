@@ -1,0 +1,24 @@
+{
+  "name": "cra-codinglabs-template",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template"
+  ],
+  "description": "A base template with Redux-Saga, Reactotron and more",
+  "main": "template.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codinglabsdev/cra-template-codinglabs.git",
+    "directory": "dist"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
