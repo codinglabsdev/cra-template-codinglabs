@@ -11,7 +11,13 @@ Also, `commitizen` is used to standarize commit messages.
 
 ## Installation
 
-After initial install, you must install the dev dependencies. You can run `yarn:init` or add dev dependencies manually:
+To use this tempalate, you need to install it via `cra-create-app`:
+
+```bash
+npx cra-create-app <my-app> --template codinglabs
+```
+
+After initial install, you may need to install the dev dependencies. You can run `yarn:init` or add dev dependencies manually:
 
 ```bash
 eslint-plugin-react@^7.14.3 eslint-config-airbnb@latest eslint@^6.1.0 eslint-plugin-import@^2.18.2 eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react-hooks@^1.7. prettier eslint-config-prettier eslint-plugin-prettier babel-eslint eslint-import-resolver-babel-plugin-root-import babel-plugin-root-import customize-cra react-app-rewired node-sass commitizen cz-conventional-changelog husky lint-staged @commitlint/cli @commitlint/config-conventiona
