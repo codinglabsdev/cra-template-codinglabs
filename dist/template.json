@@ -1,0 +1,59 @@
+{
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "history": "^4.10.1",
+    "polished": "^3.4.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "react-toastify": "^5.5.0",
+    "reactotron-react-js": "^3.3.7",
+    "reactotron-redux": "^3.1.2",
+    "reactotron-redux-saga": "^4.2.3",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "reduxsauce": "^1.1.1",
+    "seamless-immutable": "^7.1.4",
+    "styled-components": "^5.0.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "coverage": "react-app-rewired test --coverage --watchAll=false",
+    "eject": "react-scripts eject",
+    "lint": "lint-staged",
+    "init:yarn": "yarn add eslint-plugin-react@^7.14.3 eslint-config-airbnb@latest eslint@^6.1.0 eslint-plugin-import@^2.18.2 eslint-plugin-jsx-a11y@^6.2.3 eslint-plugin-react-hooks@^1.7. prettier eslint-config-prettier eslint-plugin-prettier babel-eslint eslint-import-resolver-babel-plugin-root-import babel-plugin-root-import customize-cra react-app-rewired node-sass commitizen cz-conventional-changelog husky lint-staged @commitlint/cli @commitlint/config-conventional -D"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "git add"]
+  },
+  "jest": {
+    "roots": ["<rootDir>/__tests__/"],
+    "testMatch": ["**/*.test.js"],
+    "moduleNameMapper": {
+      "^~/(.*)": "<rootDir>/src/$1",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__tests__/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__tests__/__mocks__/styleMock.js"
+    },
+    "coverageDirectory": "__tests__/coverage"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
